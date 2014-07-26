@@ -2,9 +2,13 @@
 ## functions do
 
 ## You have to create a matrix first
-## Example > x = matrix(rnorm(20), nrow =5)
 ## The first part is to set and get the value  of the matrix
 ## Then set and get the inverse of the matrix
+## Example:
+##  > x = matrix(rnorm(20), nrow =5)
+##  > m = makeCacheMatrix(x)
+##  > m$get()  # displays the created matrix
+
 
 makeCacheMatrix <- function(x = matrix()) {
   s = NULL
@@ -22,7 +26,10 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 ## will calculate the inverse and will check if it is still
-## in memory and responde with a message if it is
+## in memory and respond with a message if it is
+## Example:
+##  > cacheSolve(m)
+
 cacheSolve <- function(x, ...) {
 
   s = x$getserse()
